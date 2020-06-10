@@ -1,0 +1,23 @@
+﻿version: '3.7'
+
+services:
+  strapi-cms:
+    container_name: strapi-cms
+    image: strapi/strapi:3.0.1
+    
+    ports:
+    - 1337:1337
+      
+    volumes:
+    - C:\Users\rico\dotnet\css-website-strapi\strapi:/srv/app
+      
+    healthcheck:
+      test: curl -f http://localhost:1337 || exit 1
+      interval: 1m
+      timeout: 15s
+      retries: 3
+      start_period: 1m
+      
+  
+    
+  

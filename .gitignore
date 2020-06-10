@@ -5,6 +5,7 @@
 
 .idea/
 .vscode/
+node_modules/
 
 # User-specific files
 *.rsuser
