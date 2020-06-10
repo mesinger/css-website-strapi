@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accomplishment",
+  "info": {
+    "name": "Leistung"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": false
+    },
+    "teaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "teaser.teaser",
+      "required": true
+    }
+  }
+}

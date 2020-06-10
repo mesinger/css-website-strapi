@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/leistungs",
+      "handler": "leistung.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/leistungs/count",
+      "handler": "leistung.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/leistungs/:id",
+      "handler": "leistung.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/leistungs",
+      "handler": "leistung.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/leistungs/:id",
+      "handler": "leistung.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/leistungs/:id",
+      "handler": "leistung.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

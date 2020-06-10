@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CSS.Website.Strapi.Data.Strapi\CSS.Website.Strapi.Data.Strapi.csproj" />
+      <ProjectReference Include="..\CSS.Website.Strapi.Domain\CSS.Website.Strapi.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

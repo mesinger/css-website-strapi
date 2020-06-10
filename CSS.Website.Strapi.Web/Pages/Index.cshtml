@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "Shared/_Layout";
+}
+
+<h1>
+    CSS Website with Strapi CMS
+</h1>
+
+<p>
+    @Model.Description
+</p>
+
+@foreach (var accomplishment in Model.FeaturedAccomplishments)
+{
+    @Html.Partial("Shared/_Teaser", accomplishment.Teaser)
+}

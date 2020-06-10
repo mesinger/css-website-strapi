@@ -1,0 +1,15 @@
+﻿@model CSS.Website.Strapi.Domain.Models.Teaser
+
+<div>
+    <h4>
+        Ich bin ein Teaser
+    </h4>
+    
+    <img src="@($"http://localhost:1337{Model.ImageUrl}")" alt="teaser"/>
+    <p>
+        @Model.Title
+    </p>
+    <p>
+        @Html.Raw(Model.Description)
+    </p>
+</div>

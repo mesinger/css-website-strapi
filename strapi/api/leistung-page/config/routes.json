@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/leistung-page",
+      "handler": "leistung-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/leistung-page",
+      "handler": "leistung-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/leistung-page",
+      "handler": "leistung-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
