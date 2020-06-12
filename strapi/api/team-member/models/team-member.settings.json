@@ -1,21 +1,24 @@
 {
   "kind": "collectionType",
-  "collectionName": "accomplishment",
+  "collectionName": "team_members",
   "info": {
-    "name": "Leistung"
+    "name": "TeamMember"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "first_name": {
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "richtext",
-      "required": false
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "richtext"
     },
     "teaser": {
       "type": "component",

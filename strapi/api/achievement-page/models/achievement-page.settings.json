@@ -1,0 +1,16 @@
+{
+  "kind": "singleType",
+  "collectionName": "achievement_pages",
+  "info": {
+    "name": "AchievementPage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "achievements": {
+      "collection": "achievement"
+    }
+  }
+}

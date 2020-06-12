@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_teaser_team_member_teasers",
+  "info": {
+    "name": "TeamMemberTeaser",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "team_member": {
+      "model": "team-member"
+    }
+  }
+}

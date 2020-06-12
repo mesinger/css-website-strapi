@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_teaser_achievement_teasers",
+  "info": {
+    "name": "AchievementTeaser",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "achievement": {
+      "model": "achievement"
+    }
+  }
+}

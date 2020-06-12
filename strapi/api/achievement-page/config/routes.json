@@ -2,24 +2,24 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/home",
-      "handler": "home.find",
+      "path": "/achievement-page",
+      "handler": "achievement-page.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/home",
-      "handler": "home.update",
+      "path": "/achievement-page",
+      "handler": "achievement-page.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/home",
-      "handler": "home.delete",
+      "path": "/achievement-page",
+      "handler": "achievement-page.delete",
       "config": {
         "policies": []
       }

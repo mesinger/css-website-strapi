@@ -1,0 +1,16 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_pages",
+  "info": {
+    "name": "TeamPage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "team_members": {
+      "collection": "team-member"
+    }
+  }
+}
