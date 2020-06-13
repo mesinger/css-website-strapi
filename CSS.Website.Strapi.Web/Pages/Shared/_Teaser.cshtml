@@ -5,11 +5,11 @@
         Ich bin ein Teaser
     </h4>
     
-    <img src="@($"http://localhost:1337{Model.ImageUrl}")" alt="teaser"/>
+    <img src="@($"http://localhost:1337{Model.TeaserImageUrl}")" alt="teaser"/>
     <p>
-        @Model.Title
+        @Model.TeaserTitle
     </p>
     <p>
-        @Html.Raw(Model.Description)
+        @Html.Raw(Model.TeaserDescription)
     </p>
 </div>

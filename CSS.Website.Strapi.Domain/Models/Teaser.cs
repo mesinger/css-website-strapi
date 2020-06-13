@@ -3,15 +3,15 @@
     // Teaser representation for a accomplishment, team member etc.
     public class Teaser
     {
-        public Teaser(string title, string description, string imageUrl)
+        public Teaser(string teaserTitle, string teaserDescription, string teaserImageUrl)
         {
-            Title = title;
-            Description = description;
-            ImageUrl = imageUrl;
+            TeaserTitle = teaserTitle;
+            TeaserDescription = teaserDescription;
+            TeaserImageUrl = teaserImageUrl;
         }
 
-        public string Title { get; }
-        public string Description { get; }
-        public string ImageUrl { get; }
+        public string TeaserTitle { get; }
+        public string TeaserDescription { get; }
+        public string TeaserImageUrl { get; }
     }
 }

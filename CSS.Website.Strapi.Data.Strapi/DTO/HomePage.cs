@@ -5,8 +5,7 @@ namespace CSS.Website.Strapi.Data.Strapi.DTO
 {
     internal class HomePage
     {
-        [JsonProperty("subtitle")] public string SubTitle { get; set; }
-        [JsonProperty("description")] public string Description { get; set; }
-        [JsonProperty("leistungen")] public IEnumerable<Accomplishment> Accomplishments { get; set; }
+        [JsonProperty("featured_achievements")] public IEnumerable<Achievement> Achievements { get; set; }
+        [JsonProperty("featured_team_members")] public IEnumerable<TeamMember> TeamMembers { get; set; }
     }
 }

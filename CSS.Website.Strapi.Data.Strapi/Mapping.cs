@@ -4,7 +4,8 @@ namespace CSS.Website.Strapi.Data.Strapi
 {
     internal static class Mapping
     {
-        public static Accomplishment ToDomain(this DTO.Accomplishment accomplishment) => new Accomplishment(accomplishment.Name, accomplishment.Description, accomplishment.Teaser.ToDomain());
-        public static Teaser ToDomain(this DTO.Teaser teaser) => new Teaser(teaser.Title, teaser.Description, teaser.TeaserImage.Url);
+        public static Achievement ToDomain(this DTO.Achievement achievement) => new Achievement(
+            achievement.Id.ToString(), achievement.Name, achievement.Description, achievement.Teaser.Title,
+            achievement.Teaser.Description, achievement.Teaser.TeaserImage.Url);
     }
 }

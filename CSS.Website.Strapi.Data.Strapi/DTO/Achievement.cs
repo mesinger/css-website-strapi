@@ -2,7 +2,7 @@
 
 namespace CSS.Website.Strapi.Data.Strapi.DTO
 {
-    internal class Accomplishment
+    internal class Achievement
     {
         [JsonProperty("id")] public int Id { get; set; }
         [JsonProperty("name")] public string Name { get; set; }

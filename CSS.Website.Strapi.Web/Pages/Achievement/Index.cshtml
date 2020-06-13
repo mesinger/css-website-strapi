@@ -1,0 +1,14 @@
+﻿@page
+@model CSS.Website.Strapi.Web.Pages.Achievement.AchievementIndexPageModel
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<div>
+    @foreach (var achievement in Model.Achievements)
+    {
+        @(await Html.PartialAsync("Shared/_Teaser", achievement))
+        <a asp-page="/achievement/item" asp-route-id="@achievement.Id">Details</a>
+    }
+</div>

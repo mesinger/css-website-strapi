@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 using CSS.Website.Strapi.Data.Strapi;
-using CSS.Website.Strapi.Domain.Dao;
-using CSS.Website.Strapi.Domain.Repository;
+using CSS.Website.Strapi.Domain.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,8 +26,7 @@ namespace CSS.Website.Strapi.Web
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
             services.AddSingleton<HttpClient>();
-            services.AddScoped<ICSSWebPageDao, StrapiCSSWebPageDao>();
-            services.AddScoped<ICSSWebPageRepository, CSSWebPageRepository>();
+            services.AddScoped<ICssAchievementDao, StrapiCssAchievementDao>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,10 +9,15 @@
     "timestamps": true
   },
   "attributes": {
-    "container": {
+    "featured_achievements": {
       "type": "dynamiczone",
       "components": [
-        "teaser.achievement-teaser",
+        "teaser.achievement-teaser"
+      ]
+    },
+    "featured_team_members": {
+      "type": "dynamiczone",
+      "components": [
         "teaser.team-member-teaser"
       ]
     }
