@@ -12,11 +12,13 @@ namespace CSS.Website.Strapi.Data.Strapi
     {
         private readonly HttpClient _httpClient;
         private readonly ICssAchievementDao _achievementDao;
+        private readonly ICssTeamMemberDao _teamMemberDao;
 
-        public StrapiCssPageDao(HttpClient httpClient, ICssAchievementDao achievementDao)
+        public StrapiCssPageDao(HttpClient httpClient, ICssAchievementDao achievementDao, ICssTeamMemberDao teamMemberDao)
         {
             _httpClient = httpClient;
             _achievementDao = achievementDao;
+            _teamMemberDao = teamMemberDao;
         }
 
         public async Task<IEnumerable<Achievement>> GetFeaturedAchievements()
@@ -27,7 +29,7 @@ namespace CSS.Website.Strapi.Data.Strapi
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var page = JsonConvert.DeserializeObject<DTO.HomePage>(responseContent);
 
-                var achievementIds = page?.Achievements.Select(achievement => achievement.Id) ?? Enumerable.Empty<int>();
+                var achievementIds = page?.Achievements.Select(achievement => achievement.Inner.Id) ?? Enumerable.Empty<int>();
                 return achievementIds.Select(async id => await _achievementDao.GetById(id.ToString())).Select(t => t.Result).Where(a => a != null)!;
             }
 
@@ -42,7 +44,8 @@ namespace CSS.Website.Strapi.Data.Strapi
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var page = JsonConvert.DeserializeObject<DTO.HomePage>(responseContent);
 
-                return Enumerable.Empty<TeamMember>();
+                var teamMemberIds = page?.TeamMembers.Select(teamMember => teamMember.Inner.Id) ?? Enumerable.Empty<int>();
+                return teamMemberIds.Select(async id => await _teamMemberDao.GetById(id.ToString())).Select(t => t.Result).Where(a => a != null)!;
             }
 
             return Enumerable.Empty<TeamMember>();

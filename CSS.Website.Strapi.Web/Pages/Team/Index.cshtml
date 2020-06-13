@@ -1,0 +1,14 @@
+﻿@page
+@model CSS.Website.Strapi.Web.Pages.Team.TeamIndexPageModel
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<div>
+    @foreach (var teamMember in Model.TeamMembers)
+    {
+        @(await Html.PartialAsync("Shared/_Teaser", teamMember))
+        <a asp-page="/team/item" asp-route-id="@teamMember.Id">Details</a>
+    }
+</div>

@@ -25,7 +25,7 @@ namespace CSS.Website.Strapi.Data.Strapi
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var achievement = JsonConvert.DeserializeObject<DTO.Achievement>(responseContent);
 
-                return achievement.ToDomain();
+                return achievement?.ToDomain();
             }
 
             return null;

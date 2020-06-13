@@ -1,10 +1,26 @@
 ﻿@page
-@model CSS.Website.Strapi.Web.Pages.Index
+@model CSS.Website.Strapi.Web.Pages.IndexPageModel
 
 @{
     Layout = "Shared/_Layout";
 }
 
-<h2>
-    Index
-</h2>
+<div>
+    <h3>
+        Unsere Leistungen
+    </h3>
+    @foreach (var achievement in Model.FeaturedAchievements)
+    {
+        @(await Html.PartialAsync("Shared/_Teaser", achievement))
+    }
+</div>
+
+<div>
+    <h3>
+        Unser Team
+    </h3>
+    @foreach (var teamMember in Model.FeaturedTeamMembers)
+    {
+        @(await Html.PartialAsync("Shared/_Teaser", teamMember))
+    }
+</div>

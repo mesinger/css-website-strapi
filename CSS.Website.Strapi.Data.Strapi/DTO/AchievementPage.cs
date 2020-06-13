@@ -5,6 +5,6 @@ namespace CSS.Website.Strapi.Data.Strapi.DTO
 {
     internal class AchievementPage
     {
-        [JsonProperty("achievements")] public IEnumerable<Achievement> Achievements { get; set; }
+        [JsonProperty("achievements")] public IEnumerable<Achievement> Achievements { get; set; } = null!;
     }
 }

@@ -1,0 +1,14 @@
+﻿@page "{id}"
+@model CSS.Website.Strapi.Web.Pages.Achievement.AchievementItemPageModel
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<div>
+    <h3>@Model.Achievement.Name</h3>
+    <p>
+        @Html.Raw(Model.Achievement.Description)
+    </p>
+    <a asp-page="/achievement/index">Zurueck</a>
+</div>

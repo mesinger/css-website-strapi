@@ -27,6 +27,8 @@ namespace CSS.Website.Strapi.Web
 
             services.AddSingleton<HttpClient>();
             services.AddScoped<ICssAchievementDao, StrapiCssAchievementDao>();
+            services.AddScoped<IHomePageDao, StrapiCssPageDao>();
+            services.AddScoped<ICssTeamMemberDao, StrapiCssTeamMemberDao>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

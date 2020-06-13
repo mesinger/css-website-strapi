@@ -1,0 +1,14 @@
+﻿@page
+@model CSS.Website.Strapi.Web.Pages.Team.TeamItemPageModel
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<div>
+    <h3>@Model.TeamMember.FirstName @Model.TeamMember.LastName</h3>
+    <p>
+        @Html.Raw(Model.TeamMember.Bio)
+    </p>
+    <a asp-page="/team/index">Zurueck</a>
+</div>
